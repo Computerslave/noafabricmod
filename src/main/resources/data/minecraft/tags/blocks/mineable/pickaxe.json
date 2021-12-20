@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "noafabricmod:ruby_ore"
+    "noafabricmod:ruby_ore",
+    "noafabricmod:ruby_block"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "noafabricmod:ruby"
+    }
+  },
+  "result": {
+    "item": "noafabricmod:ruby_block"
+  }
+}

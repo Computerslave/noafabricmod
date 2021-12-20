@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "noafabricmod:ruby_block"
+    }
+  ],
+  "result": {
+    "item": "noafabricmod:ruby",
+    "count": 9
+  }
+}

@@ -8,6 +8,8 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
 
-    public static final ItemGroup NOAFABRICMOD = FabricItemGroupBuilder.build(new Identifier(NoaFabricMod.MOD_ID, "ruby"), () -> new ItemStack(ModItem.RUBY));
+    private ModItemGroup(){}
+
+    public static final ItemGroup NOAFABRICMOD = FabricItemGroupBuilder.build(new Identifier(NoaFabricMod.MOD_ID, "noafabricmod"), () -> new ItemStack(ModItem.RUBY));
 
 }
