@@ -1,7 +1,7 @@
 package fr.computerslave.noafabricmod;
 
-import fr.computerslave.noafabricmod.block.Blocks;
-import fr.computerslave.noafabricmod.item.Items;
+import fr.computerslave.noafabricmod.block.ModBlock;
+import fr.computerslave.noafabricmod.item.ModItem;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,8 +18,8 @@ public class NoaFabricMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Items.registerItems();
-		Blocks.registerBlocks();
+		ModItem.registerItems();
+		ModBlock.registerBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
