@@ -14,18 +14,18 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlock {
 
-    public static final Block RUBY_ORE = registerBlock("ruby_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool(), UniformIntProvider.create(5, 10)));
-    public static final Block RUBY_BLOCK = registerBlock("ruby_block", new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()));
+    public static final Block RUBY_ORE = registerBlock("ruby_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool(), UniformIntProvider.create(5, 10)), null);
+    public static final Block RUBY_BLOCK = registerBlock("ruby_block", new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), new FabricItemSettings().fireproof());
 
     private ModBlock(){}
 
-    private static Block registerBlock(String name, Block block){
-        registerBlockItem(name, block);
+    private static Block registerBlock(String name, Block block, FabricItemSettings settings){
+        registerBlockItem(name, block, (settings == null ? new FabricItemSettings() : settings).group(ModItemGroup.NOAFABRICMOD).maxCount(64));
         return Registry.register(Registry.BLOCK, new Identifier(NoaFabricMod.MOD_ID, name), block);
     }
 
-    private static void registerBlockItem(String name, Block block){
-        Registry.register(Registry.ITEM, new Identifier(NoaFabricMod.MOD_ID, name), new BlockItem(block, new FabricItemSettings().group(ModItemGroup.NOAFABRICMOD)));
+    private static void registerBlockItem(String name, Block block, FabricItemSettings settings){
+        Registry.register(Registry.ITEM, new Identifier(NoaFabricMod.MOD_ID, name), new BlockItem(block, settings));
     }
 
     public static void registerBlocks(){
